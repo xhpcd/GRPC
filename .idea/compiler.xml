@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rpc-grpc-api" />
+        <module name="rpc-grpc-serveice" />
+        <module name="rpc-grpc-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
