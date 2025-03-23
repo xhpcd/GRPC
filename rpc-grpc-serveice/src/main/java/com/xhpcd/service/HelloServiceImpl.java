@@ -62,4 +62,32 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
         responseObserver.onCompleted();
 
     }
+    //客户端流式rpc 常用于IOT平台
+
+
+    @Override
+    public StreamObserver<HelloProto.HelloRequest> cs2s(StreamObserver<HelloProto.HelloResponse> responseObserver) {
+        return new StreamObserver<HelloProto.HelloRequest>() {
+            @Override
+            public void onNext(HelloProto.HelloRequest helloRequest) {
+                System.out.println("server received request "+helloRequest.getName());
+                //如果针对于每一个客户端都响应可以在此调用onNext
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+                //说明客户端已经完成所有发送
+                //当接收所有信息后提供响应
+                HelloProto.HelloResponse.Builder builder = HelloProto.HelloResponse.newBuilder();
+                builder.setResult("ok");
+                responseObserver.onNext(builder.build());
+                responseObserver.onCompleted();
+            }
+        };
+    }
 }
