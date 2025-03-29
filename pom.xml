@@ -12,6 +12,9 @@
         <module>rpc-grpc-api</module>
         <module>rpc-grpc-serveice</module>
         <module>rpc-grpc-client</module>
+        <module>rpc-grpc-adv-api</module>
+        <module>rpc-grpc-adv-client</module>
+        <module>rpc-grpc-adv-server</module>
     </modules>
 
     <properties>
@@ -30,6 +33,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
         </dependency>
     </dependencies>
 

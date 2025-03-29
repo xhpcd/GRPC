@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:
+      rpc-grpc-boot-server
+  main:
+    web-application-type: none
+
+
+grpc:
+  server:
+    port: 9000
