@@ -46,6 +46,37 @@ public final class HelloServiceGrpc {
     return getHelloMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.xhpcd.HelloProto.HelloRequest,
+      com.xhpcd.HelloProto.HelloResponse> getHello1Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "hello1",
+      requestType = com.xhpcd.HelloProto.HelloRequest.class,
+      responseType = com.xhpcd.HelloProto.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.xhpcd.HelloProto.HelloRequest,
+      com.xhpcd.HelloProto.HelloResponse> getHello1Method() {
+    io.grpc.MethodDescriptor<com.xhpcd.HelloProto.HelloRequest, com.xhpcd.HelloProto.HelloResponse> getHello1Method;
+    if ((getHello1Method = HelloServiceGrpc.getHello1Method) == null) {
+      synchronized (HelloServiceGrpc.class) {
+        if ((getHello1Method = HelloServiceGrpc.getHello1Method) == null) {
+          HelloServiceGrpc.getHello1Method = getHello1Method =
+              io.grpc.MethodDescriptor.<com.xhpcd.HelloProto.HelloRequest, com.xhpcd.HelloProto.HelloResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "hello1"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.xhpcd.HelloProto.HelloRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.xhpcd.HelloProto.HelloResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("hello1"))
+              .build();
+        }
+      }
+    }
+    return getHello1Method;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -115,6 +146,13 @@ public final class HelloServiceGrpc {
         io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloMethod(), responseObserver);
     }
+
+    /**
+     */
+    default io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloRequest> hello1(
+        io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getHello1Method(), responseObserver);
+    }
   }
 
   /**
@@ -151,6 +189,14 @@ public final class HelloServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getHelloMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloRequest> hello1(
+        io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getHello1Method(), getCallOptions()), responseObserver);
+    }
   }
 
   /**
@@ -174,6 +220,15 @@ public final class HelloServiceGrpc {
     public com.xhpcd.HelloProto.HelloResponse hello(com.xhpcd.HelloProto.HelloRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHelloMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.xhpcd.HelloProto.HelloRequest, com.xhpcd.HelloProto.HelloResponse>
+        hello1() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getHello1Method(), getCallOptions());
     }
   }
 
@@ -227,6 +282,7 @@ public final class HelloServiceGrpc {
   }
 
   private static final int METHODID_HELLO = 0;
+  private static final int METHODID_HELLO1 = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -259,6 +315,9 @@ public final class HelloServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_HELLO1:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.hello1(
+              (io.grpc.stub.StreamObserver<com.xhpcd.HelloProto.HelloResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -274,6 +333,13 @@ public final class HelloServiceGrpc {
               com.xhpcd.HelloProto.HelloRequest,
               com.xhpcd.HelloProto.HelloResponse>(
                 service, METHODID_HELLO)))
+        .addMethod(
+          getHello1Method(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.xhpcd.HelloProto.HelloRequest,
+              com.xhpcd.HelloProto.HelloResponse>(
+                service, METHODID_HELLO1)))
         .build();
   }
 
@@ -323,6 +389,7 @@ public final class HelloServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HelloServiceFileDescriptorSupplier())
               .addMethod(getHelloMethod())
+              .addMethod(getHello1Method())
               .build();
         }
       }

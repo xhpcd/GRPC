@@ -1139,10 +1139,11 @@ public final class HelloProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Hello.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 " +
-      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t26\n\014" +
+      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t2c\n\014" +
       "HelloService\022&\n\005hello\022\r.HelloRequest\032\016.H" +
-      "elloResponseB\031\n\tcom.xhpcdB\nHelloProtoP\000b" +
-      "\006proto3"
+      "elloResponse\022+\n\006hello1\022\r.HelloRequest\032\016." +
+      "HelloResponse(\0010\001B\031\n\tcom.xhpcdB\nHelloPro" +
+      "toP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
