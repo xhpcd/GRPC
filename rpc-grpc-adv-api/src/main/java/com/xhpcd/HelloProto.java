@@ -16,7 +16,7 @@ public final class HelloProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface HelloRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:HelloRequest)
+      // @@protoc_insertion_point(interface_extends:com.xhpcd.HelloRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32,11 +32,11 @@ public final class HelloProto {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code HelloRequest}
+   * Protobuf type {@code com.xhpcd.HelloRequest}
    */
   public static final class HelloRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:HelloRequest)
+      // @@protoc_insertion_point(message_implements:com.xhpcd.HelloRequest)
       HelloRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use HelloRequest.newBuilder() to construct.
@@ -56,13 +56,13 @@ public final class HelloProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.xhpcd.HelloProto.internal_static_HelloRequest_descriptor;
+      return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.xhpcd.HelloProto.internal_static_HelloRequest_fieldAccessorTable
+      return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.xhpcd.HelloProto.HelloRequest.class, com.xhpcd.HelloProto.HelloRequest.Builder.class);
     }
@@ -263,21 +263,21 @@ public final class HelloProto {
       return builder;
     }
     /**
-     * Protobuf type {@code HelloRequest}
+     * Protobuf type {@code com.xhpcd.HelloRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:HelloRequest)
+        // @@protoc_insertion_point(builder_implements:com.xhpcd.HelloRequest)
         com.xhpcd.HelloProto.HelloRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.xhpcd.HelloProto.internal_static_HelloRequest_descriptor;
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.xhpcd.HelloProto.internal_static_HelloRequest_fieldAccessorTable
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.xhpcd.HelloProto.HelloRequest.class, com.xhpcd.HelloProto.HelloRequest.Builder.class);
       }
@@ -303,7 +303,7 @@ public final class HelloProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.xhpcd.HelloProto.internal_static_HelloRequest_descriptor;
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloRequest_descriptor;
       }
 
       @java.lang.Override
@@ -516,10 +516,10 @@ public final class HelloProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:HelloRequest)
+      // @@protoc_insertion_point(builder_scope:com.xhpcd.HelloRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:HelloRequest)
+    // @@protoc_insertion_point(class_scope:com.xhpcd.HelloRequest)
     private static final com.xhpcd.HelloProto.HelloRequest DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.xhpcd.HelloProto.HelloRequest();
@@ -568,7 +568,7 @@ public final class HelloProto {
   }
 
   public interface HelloResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:HelloResponse)
+      // @@protoc_insertion_point(interface_extends:com.xhpcd.HelloResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -584,11 +584,11 @@ public final class HelloProto {
         getResultBytes();
   }
   /**
-   * Protobuf type {@code HelloResponse}
+   * Protobuf type {@code com.xhpcd.HelloResponse}
    */
   public static final class HelloResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:HelloResponse)
+      // @@protoc_insertion_point(message_implements:com.xhpcd.HelloResponse)
       HelloResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use HelloResponse.newBuilder() to construct.
@@ -608,13 +608,13 @@ public final class HelloProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.xhpcd.HelloProto.internal_static_HelloResponse_descriptor;
+      return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.xhpcd.HelloProto.internal_static_HelloResponse_fieldAccessorTable
+      return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.xhpcd.HelloProto.HelloResponse.class, com.xhpcd.HelloProto.HelloResponse.Builder.class);
     }
@@ -815,21 +815,21 @@ public final class HelloProto {
       return builder;
     }
     /**
-     * Protobuf type {@code HelloResponse}
+     * Protobuf type {@code com.xhpcd.HelloResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:HelloResponse)
+        // @@protoc_insertion_point(builder_implements:com.xhpcd.HelloResponse)
         com.xhpcd.HelloProto.HelloResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.xhpcd.HelloProto.internal_static_HelloResponse_descriptor;
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.xhpcd.HelloProto.internal_static_HelloResponse_fieldAccessorTable
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.xhpcd.HelloProto.HelloResponse.class, com.xhpcd.HelloProto.HelloResponse.Builder.class);
       }
@@ -855,7 +855,7 @@ public final class HelloProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.xhpcd.HelloProto.internal_static_HelloResponse_descriptor;
+        return com.xhpcd.HelloProto.internal_static_com_xhpcd_HelloResponse_descriptor;
       }
 
       @java.lang.Override
@@ -1068,10 +1068,10 @@ public final class HelloProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:HelloResponse)
+      // @@protoc_insertion_point(builder_scope:com.xhpcd.HelloResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:HelloResponse)
+    // @@protoc_insertion_point(class_scope:com.xhpcd.HelloResponse)
     private static final com.xhpcd.HelloProto.HelloResponse DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.xhpcd.HelloProto.HelloResponse();
@@ -1120,15 +1120,15 @@ public final class HelloProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_HelloRequest_descriptor;
+    internal_static_com_xhpcd_HelloRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_HelloRequest_fieldAccessorTable;
+      internal_static_com_xhpcd_HelloRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_HelloResponse_descriptor;
+    internal_static_com_xhpcd_HelloResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_HelloResponse_fieldAccessorTable;
+      internal_static_com_xhpcd_HelloResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1138,28 +1138,29 @@ public final class HelloProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013Hello.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 " +
-      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t2c\n\014" +
-      "HelloService\022&\n\005hello\022\r.HelloRequest\032\016.H" +
-      "elloResponse\022+\n\006hello1\022\r.HelloRequest\032\016." +
-      "HelloResponse(\0010\001B\031\n\tcom.xhpcdB\nHelloPro" +
-      "toP\000b\006proto3"
+      "\n\013Hello.proto\022\tcom.xhpcd\"\034\n\014HelloRequest" +
+      "\022\014\n\004name\030\001 \001(\t\"\037\n\rHelloResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t2\213\001\n\014HelloService\022:\n\005hello\022\027.com." +
+      "xhpcd.HelloRequest\032\030.com.xhpcd.HelloResp" +
+      "onse\022?\n\006hello1\022\027.com.xhpcd.HelloRequest\032" +
+      "\030.com.xhpcd.HelloResponse(\0010\001B\031\n\tcom.xhp" +
+      "cdB\nHelloProtoP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_HelloRequest_descriptor =
+    internal_static_com_xhpcd_HelloRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_HelloRequest_fieldAccessorTable = new
+    internal_static_com_xhpcd_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_HelloRequest_descriptor,
+        internal_static_com_xhpcd_HelloRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_HelloResponse_descriptor =
+    internal_static_com_xhpcd_HelloResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_HelloResponse_fieldAccessorTable = new
+    internal_static_com_xhpcd_HelloResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_HelloResponse_descriptor,
+        internal_static_com_xhpcd_HelloResponse_descriptor,
         new java.lang.String[] { "Result", });
   }
 

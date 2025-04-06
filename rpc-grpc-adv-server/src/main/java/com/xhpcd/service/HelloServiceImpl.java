@@ -3,16 +3,27 @@ package com.xhpcd.service;
 
 import com.xhpcd.HelloProto;
 import com.xhpcd.HelloServiceGrpc;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Random;
+
 @Slf4j
 public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
+    private final Random random = new Random();
+
     @Override
     public void hello(HelloProto.HelloRequest request, StreamObserver<HelloProto.HelloResponse> responseObserver) {
-        System.out.println("name="+request.getName());
-        responseObserver.onNext(HelloProto.HelloResponse.newBuilder().setResult(" this is server").build());
-        responseObserver.onCompleted();
+        if(random.nextInt(100)>50) {
+            System.out.println("name=" + request.getName());
+            responseObserver.onNext(HelloProto.HelloResponse.newBuilder().setResult(" this is server").build());
+            responseObserver.onCompleted();
+        }else {
+            //模拟异常
+            log.debug("不可达异常");
+            responseObserver.onError(Status.UNAVAILABLE.withDescription("for retry").asRuntimeException());
+        }
     }
 
     @Override

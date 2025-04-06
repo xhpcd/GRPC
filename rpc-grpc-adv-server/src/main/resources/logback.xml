@@ -11,9 +11,13 @@
         </encoder>
     </appender>
 
-    <logger name = "com.xhpcd" level="DEBUG" activity="false">
+  <!--  <logger name = "com.xhpcd" level="DEBUG" activity="false">
         <appender-ref ref="appender"></appender-ref>
 
-    </logger>
+    </logger>-->
+
+    <root level="DEBUG">
+        <appender-ref ref="appender"></appender-ref>
+    </root>
 
 </configuration>

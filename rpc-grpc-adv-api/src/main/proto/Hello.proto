@@ -1,8 +1,12 @@
 syntax = "proto3";
 
+//逻辑包 可以用户客户端重试配置
+package com.xhpcd;
+
 option java_outer_classname = "HelloProto";
 option java_package = "com.xhpcd";
 option java_multiple_files = false;
+
 
 message HelloRequest{
     string name = 1;
